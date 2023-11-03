@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-
+import localFont from 'next/font/local'
 const inter = Inter({ subsets: ['latin'] })
-
+const myFont = localFont({ src: './divine_imperium.woff2' })
 export default function Home() {
   return (
     <main
