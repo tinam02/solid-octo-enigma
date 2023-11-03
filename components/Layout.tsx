@@ -1,9 +1,9 @@
+import { useStyle } from '@/hooks/StyleProvider';
 import localFont from 'next/font/local'
 import Head from "next/head";
 import Link from "next/link";
 
-const myFont = localFont({ src: '../pages/divine_imperium.woff2' })
-
+ 
 export default function Layout({
   title,
   children,
@@ -11,8 +11,10 @@ export default function Layout({
   title: string;
   children: any;
 }) {
+  const { fonts } = useStyle();
+
   return (
-    <div className={myFont.className}>
+    <div>
       <Head>
         <title>{title}</title>
       </Head>

@@ -1,14 +1,18 @@
 import { useState } from "react";
 import Pill from "./atoms/Pill";
+import { useStyle } from "@/hooks/StyleProvider";
+import classNames from "classnames";
 
 interface NavProps {
   hide?: boolean;
 }
 
 const Nav: React.FC<NavProps> = ({ hide = false }) => {
+  const { fonts } = useStyle();
+
   return (
     <nav className="flex items-center gap-3 px-2 navx" style={{}}>
-      <Pill text="Home" className="secondary" />
+      <Pill text="Home" className={classNames('secondary',fonts.divine)} />
       <div className="flex items-center gap-4">
         <Pill text="Home" className="primary" />
         <Pill text="Home" className="secondary" />
