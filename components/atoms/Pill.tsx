@@ -2,15 +2,15 @@ import classNames from "classnames";
 import { useState } from "react";
 
 interface NavProps {
-  text: string;
+  children: React.ReactNode;  
   className?: string;
   onClick?: () => void;
 }
 
-const Pill: React.FC<NavProps> = ({ text, className, onClick }) => {
+const Pill: React.FC<NavProps> = ({ children, className, onClick }) => {
   return (
     <div className={classNames("pill", className)} onClick={onClick}>
-      {text}
+      {children}
     </div>
   );
 };

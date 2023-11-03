@@ -1,9 +1,7 @@
-import { useStyle } from '@/hooks/StyleProvider';
-import localFont from 'next/font/local'
+import { useStyle } from "@/hooks/StyleProvider";
 import Head from "next/head";
-import Link from "next/link";
+import Nav from "./Nav";
 
- 
 export default function Layout({
   title,
   children,
@@ -14,13 +12,11 @@ export default function Layout({
   const { fonts } = useStyle();
 
   return (
-    <div>
+    <div className={fonts.lorenza} style={{fontWeight:'bold',fontSize:'20px'}}>
       <Head>
         <title>{title}</title>
       </Head>
-      <h2>
-        <Link href="/">← Back to home</Link>
-      </h2>
+      <Nav />
       {children}
     </div>
   );

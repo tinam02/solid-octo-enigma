@@ -14,19 +14,18 @@ export default function App({ Component, pageProps, router }: AppProps) {
   };
   return (
     <StyleProvider>
-      <Layout title="T">
-        <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait">
+        <Layout title="T">
           <motion.div key={router.route}>
             <motion.div
               className="blur"
               transition={transitionSpringPhysics}
               animate={{ opacity: 0 }}
             />
-            <Nav />
-            <Component {...pageProps} />{" "}
+            <Component {...pageProps} />
           </motion.div>
-        </AnimatePresence>
-      </Layout>
+        </Layout>
+      </AnimatePresence>
     </StyleProvider>
   );
 }
