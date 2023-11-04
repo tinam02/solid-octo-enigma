@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 import localFont from "next/font/local";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles, darkTheme, lightTheme } from "@/styles/theme";
@@ -49,10 +49,19 @@ export const StyleProvider = ({ children }: { children: React.ReactNode }) => {
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark");
+      localStorage.setItem("theme", "dark");
     } else {
       setTheme("light");
+      localStorage.setItem("theme", "light");
     }
   };
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem("theme");
+    if (localTheme) {
+      setTheme(localTheme);
+    }
+  }, []);
 
   return (
     <StyleContext.Provider value={{ fonts, toggleTheme }}>

@@ -12,9 +12,9 @@ export default function App({ Component, pageProps, router }: AppProps) {
     damping: 10,
   };
   return (
-    <StyleProvider>
+    <StyleProvider>   <Layout title="T">
       <AnimatePresence mode="wait">
-        <Layout title="T">
+     
           <motion.div key={router.route}>
             <motion.div
               className="blur"
@@ -23,8 +23,8 @@ export default function App({ Component, pageProps, router }: AppProps) {
             />
             <Component {...pageProps} />
           </motion.div>
-        </Layout>
-      </AnimatePresence>
+       
+      </AnimatePresence> </Layout>
     </StyleProvider>
   );
 }

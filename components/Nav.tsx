@@ -25,7 +25,7 @@ const Nav: React.FC<NavProps> = ({ hide = false }) => {
           }}
         >
           <RandomizeFont text='LinkedIn' />
-        </Pill>
+         </Pill>
         <Pill className='secondary' onClick={toggleTheme}>
           T
         </Pill>

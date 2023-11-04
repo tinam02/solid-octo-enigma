@@ -1,21 +1,15 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const lightTheme = {
-  primaryRgb: "255, 255, 255",
-  secondaryRgb: "0, 0, 0",
-  body: "#E2E2E2",
-  text: "#363537",
-  toggleBorder: "#FFF",
-  gradient: "linear-gradient(#39598A, #79D7ED)",
+  primaryRgb: '240, 240, 240',
+  secondaryRgb: '7, 8, 18',
+  gradient: 'linear-gradient(#39598A, #79D7ED)',
 };
 
 export const darkTheme = {
-  primaryRgb: "0, 0, 0",
-  secondaryRgb: "255, 255, 255",
-  body: "#363537",
-  text: "#FAFAFA",
-  toggleBorder: "#6B8096",
-  gradient: "linear-gradient(#091236, #1E215D)",
+  primaryRgb: '7, 8, 18',
+  secondaryRgb: '240, 240, 240',
+  gradient: 'linear-gradient(#091236, #1E215D)',
 };
 
 export const GlobalStyles = createGlobalStyle`
@@ -26,8 +20,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
+    background: rgba(${({ theme }) => theme.primaryRgb}, 1);      
+    color: rgba(${({ theme }) => theme.secondaryRgb}, 1); 
     transition: all 0.25s linear;
   }
 
@@ -82,4 +76,16 @@ export const GlobalStyles = createGlobalStyle`
     z-index: 100;
   }
   
+
+  .pageHeader{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pageHeader h1{
+
+  }
+
     `;

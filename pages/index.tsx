@@ -1,4 +1,5 @@
 import { RandomizeFont } from "@/components/atoms/FontRandomizer";
+import { PageHeader } from "@/components/organisms/PageHeader";
 import { useStyle } from "@/hooks/StyleProvider";
 import Image from "next/image";
 
@@ -7,9 +8,8 @@ export default function Home() {
   console.log(fonts);
   return (
     <main className={`  min-h-screen    `}>
-              <RandomizeFont text="LinkehdIn" fonts={
-               [ fonts.divine,fonts.lorenza]
-              } /> <RandomizeFont text="LinkehdIn" />
+            
+              <PageHeader/>
   {/* <div className=" grid text-center   lg:grid-cols-4  ">
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"

@@ -23,7 +23,7 @@ export function RandomizeFont({
         {char}
       </span>
     ));
-  }, [text]);
+  }, []);
 
   return <>{randomizedText}</>;
 }
