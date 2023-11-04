@@ -107,4 +107,16 @@ export const GlobalStyles = createGlobalStyle`
     background: rgba(${({ theme }) => theme.secondaryRgb}, 1);
     color: rgba(${({ theme }) => theme.primaryRgb}, 1);
   }
+
+ .project  header:hover{
+ background: linear-gradient(180deg, rgba(135,2,250,1) 0%, rgba(0,0,0,0) 100%); 
+  }
+  .dividerx{
+    width:1px;
+    height:100%;
+    border-right:1px solid rgba(${({ theme }) => theme.secondaryRgb}, 1);
+    background: rgba(${({ theme }) => theme.secondaryRgb}, 1);
+  }
+
+  
     `;
