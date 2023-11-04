@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { RandomizeFont } from './atoms/FontRandomizer';
 import AnimatedTextCharacter from './atoms/AnimatedText';
 
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useScroll } from 'framer-motion';
 
 interface NavProps {
   hide?: boolean;
@@ -14,7 +14,7 @@ interface NavProps {
 const Nav: React.FC<NavProps> = ({ hide = false }) => {
   const { fonts, toggleTheme } = useStyle();
   const [open, setOpen] = useState(false);
-
+  const { scrollYProgress } = useScroll();
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -73,7 +73,12 @@ const Nav: React.FC<NavProps> = ({ hide = false }) => {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </div>{' '}
+      {/* <motion.div
+        style={{ scaleX: scrollYProgress,backgroundColor: 'red'  }}
+       >
+        sda
+      </motion.div> */}
     </nav>
   );
 };

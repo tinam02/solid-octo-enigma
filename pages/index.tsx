@@ -1,16 +1,16 @@
-import { RandomizeFont } from "@/components/atoms/FontRandomizer";
-import { PageHeader } from "@/components/organisms/PageHeader";
-import { useStyle } from "@/hooks/StyleProvider";
-import Image from "next/image";
+import { PageHeader } from '@/components/organisms/PageHeader';
+import { Projects } from '@/components/organisms/Projects';
+import { useStyle } from '@/hooks/StyleProvider';
 
 export default function Home() {
   const { fonts } = useStyle();
-  console.log(fonts);
+
   return (
     <main className={`  min-h-screen    `}>
-            
-              <PageHeader/>
-  {/* <div className=" grid text-center   lg:grid-cols-4  ">
+      <PageHeader />
+
+      <Projects />
+      {/* <div className=" grid text-center   lg:grid-cols-4  ">
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"

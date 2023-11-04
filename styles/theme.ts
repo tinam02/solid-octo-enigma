@@ -24,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: rgba(${({ theme }) => theme.primaryRgb}, 1);      
     color: rgba(${({ theme }) => theme.secondaryRgb}, 1); 
-    transition: all 0.25s linear;
+    transition: all 0.25s linear;height:2000px
   }
 
   .blur {
@@ -57,13 +57,17 @@ export const GlobalStyles = createGlobalStyle`
     display: inline-block;
     background: rgba(${({ theme }) => theme.primaryRgb}, 1);
     color: rgba(${({ theme }) => theme.secondaryRgb}, 1);
-    border: 1px solid rgba(${({ theme }) =>  {return theme === lightTheme ? theme.secondaryRgb : theme.primaryRgb}}, 1);
+    border: 1px solid rgba(${({ theme }) => {
+      return theme === lightTheme ? theme.secondaryRgb : theme.primaryRgb;
+    }}, 1);
   }
   
   .pill.secondary {
     background: rgba(${({ theme }) => theme.secondaryRgb}, 1);
     color: rgba(${({ theme }) => theme.primaryRgb}, 1);
-    border: 1px solid rgba(${({ theme }) => {return theme === darkTheme ? theme.primaryRgb : theme.secondaryRgb}}, 1);
+    border: 1px solid rgba(${({ theme }) => {
+      return theme === darkTheme ? theme.primaryRgb : theme.secondaryRgb;
+    }}, 1);
   }
   
   .navx {
@@ -86,4 +90,21 @@ export const GlobalStyles = createGlobalStyle`
  
   }
 
+
+  button{
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    background:none;
+    color: rgba(${({ theme }) => theme.secondaryRgb}, 1);
+    border: 1px solid rgba(${({ theme }) => theme.secondaryRgb}, 1);
+  }
+  button:hover{
+    background: rgba(${({ theme }) => theme.secondaryRgb}, 1);
+    color: rgba(${({ theme }) => theme.primaryRgb}, 1);
+  }
+  button.active{
+    background: rgba(${({ theme }) => theme.secondaryRgb}, 1);
+    color: rgba(${({ theme }) => theme.primaryRgb}, 1);
+  }
     `;
