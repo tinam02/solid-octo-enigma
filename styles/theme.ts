@@ -4,12 +4,14 @@ export const lightTheme = {
   primaryRgb: '240, 240, 240',
   secondaryRgb: '7, 8, 18',
   gradient: 'linear-gradient(#39598A, #79D7ED)',
+  accent: '160, 100, 255',
 };
 
 export const darkTheme = {
   primaryRgb: '7, 8, 18',
   secondaryRgb: '240, 240, 240',
   gradient: 'linear-gradient(#091236, #1E215D)',
+  accent: '150, 170, 255',
 };
 
 export const GlobalStyles = createGlobalStyle`
@@ -78,14 +80,10 @@ export const GlobalStyles = createGlobalStyle`
   
 
   .pageHeader{
-    width: 100%;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+     background: rgba(${({ theme }) => theme.accent}, 1);
   }
   .pageHeader h1{
-
+ 
   }
 
     `;
