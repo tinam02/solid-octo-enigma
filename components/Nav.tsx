@@ -6,6 +6,7 @@ import { RandomizeFont } from './atoms/FontRandomizer';
 import AnimatedTextCharacter from './atoms/AnimatedText';
 
 import { AnimatePresence, motion, useScroll } from 'framer-motion';
+import { SunIcon } from '@heroicons/react/24/outline';
 
 interface NavProps {
   hide?: boolean;
@@ -31,9 +32,9 @@ const Nav: React.FC<NavProps> = ({ hide = false }) => {
 
   return (
     <nav className='flex items-center px-2 navx select-none' style={{}}>
-      <Pill className={classNames('secondary', fonts.divine)}>as </Pill>
-      <div className=' items-center gap-3 hidden md:flex'>
-        <Pill className='primary'>Home</Pill>
+      <Pill className={classNames('secondary')}>as </Pill>
+      <div className=' items-center gap-3 hidden md:flex text-4xl'>
+        <Pill className='primary text-xxl '>Home</Pill>
         <Pill className='secondary'>Email</Pill>
         <Pill
           className='secondary'
@@ -47,7 +48,11 @@ const Nav: React.FC<NavProps> = ({ hide = false }) => {
           T
         </Pill>
       </div>
-      <div className='relative md:hidden'>
+      <div className='relative md:hidden text-3xl'>
+        <SunIcon
+          className={classNames('w-8 h-8 inline-block transition-transform duration-300 ')}
+          onClick={toggleTheme}
+        />
         <Pill className='secondary' onClick={() => setOpen(prev => !prev)}>
           Menu
         </Pill>
@@ -60,11 +65,6 @@ const Nav: React.FC<NavProps> = ({ hide = false }) => {
               animate='show'
               className='absolute top-[60px] right-0 flex flex-col items-end gap-4'
             >
-              <motion.div variants={item}>
-                <Pill className='secondary' onClick={toggleTheme}>
-                  T
-                </Pill>
-              </motion.div>
               <motion.div variants={item}>
                 <Pill className='secondary' onClick={toggleTheme}>
                   Tsfsdfsdf

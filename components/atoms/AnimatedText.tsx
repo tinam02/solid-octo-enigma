@@ -1,11 +1,11 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 
-const AnimatedTextCharacter = ({ text='' }) => {
-// splitting text into letters
+const AnimatedTextCharacter = ({ text = '' }) => {
+  // splitting text into letters
   const letters = Array.from(text);
 
-// Variants for Container
+  // Variants for Container
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
@@ -14,14 +14,14 @@ const AnimatedTextCharacter = ({ text='' }) => {
     }),
   };
 
-// Variants for each letter
+  // Variants for each letter
   const child = {
     visible: {
       opacity: 1,
       x: 0,
       y: 0,
       transition: {
-        type: "spring",
+        type: 'spring',
         damping: 12,
         stiffness: 100,
       },
@@ -31,7 +31,7 @@ const AnimatedTextCharacter = ({ text='' }) => {
       x: -20,
       y: 10,
       transition: {
-        type: "spring",
+        type: 'spring',
         damping: 12,
         stiffness: 100,
       },
@@ -40,14 +40,14 @@ const AnimatedTextCharacter = ({ text='' }) => {
 
   return (
     <motion.div
-      style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }}
+      style={{ overflow: 'hidden', display: 'flex' }}
       variants={container}
-      initial="hidden"
-      animate="visible"
+      initial='hidden'
+      animate='visible'
     >
       {letters.map((letter, index) => (
         <motion.span variants={child} key={index}>
-          {letter === " " ? "\u00A0" : letter}
+          {letter === ' ' ? '\u00A0' : letter}
         </motion.span>
       ))}
     </motion.div>
@@ -55,4 +55,3 @@ const AnimatedTextCharacter = ({ text='' }) => {
 };
 
 export default AnimatedTextCharacter;
-

@@ -1,6 +1,7 @@
 import { useStyle } from "@/hooks/StyleProvider";
 import Head from "next/head";
 import Nav from "./Nav";
+import classNames from "classnames";
 
 export default function Layout({
   title,
@@ -12,7 +13,7 @@ export default function Layout({
   const { fonts } = useStyle();
 
   return (
-    <div className={fonts.lorenza} style={{fontWeight:'bold',fontSize:'20px'}}>
+    <div className={classNames(fonts.helvetica, )}>
       <Head>
         <title>{title}</title>
       </Head>

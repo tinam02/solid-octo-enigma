@@ -14,7 +14,7 @@ export const PageHeader: React.FC<any> = ({
   return (
     <header
       className={classNames(
-        'pageHeader w-[100%] flex items-center justify-center h-[35vh]',
+        'pageHeader w-[100%] flex items-center justify-center h-[35vh] border-b borderColor',
         className
       )}
     >

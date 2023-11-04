@@ -48,7 +48,6 @@ export const GlobalStyles = createGlobalStyle`
 .pill {
     border-radius: 50px;
     padding: 2px 20px;
-    font-size: 28px;
     font-weight: 500;
     letter-spacing: 1px;
     cursor: pointer;
@@ -72,11 +71,10 @@ export const GlobalStyles = createGlobalStyle`
   
   .navx {
     position: fixed;
-    top: 0;
+    top: 5px;
     left: 0;
     width: 100%;
-    height: 70px;
-    display: flex;
+     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
@@ -119,4 +117,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   
+
+  .borderColor{
+    border-color: rgba(${({ theme }) => theme.secondaryRgb}, 1);
+  }
+
     `;
