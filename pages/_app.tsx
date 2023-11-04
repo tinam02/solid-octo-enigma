@@ -1,9 +1,8 @@
-import "@/styles/globals.css";
-import type { AppProps } from "next/app";
-import { AnimatePresence, motion, Spring } from "framer-motion";
 import Layout from "@/components/Layout";
-import Nav from "@/components/Nav";
 import { StyleProvider } from "@/hooks/StyleProvider";
+import "@/styles/globals.css";
+import { AnimatePresence, motion, Spring } from "framer-motion";
+import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps, router }: AppProps) {
   const transitionSpringPhysics: Spring = {
