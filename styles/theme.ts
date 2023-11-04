@@ -57,13 +57,13 @@ export const GlobalStyles = createGlobalStyle`
     display: inline-block;
     background: rgba(${({ theme }) => theme.primaryRgb}, 1);
     color: rgba(${({ theme }) => theme.secondaryRgb}, 1);
-    border: 1px solid rgba(${({ theme }) => theme.secondaryRgb}, 1);
+    border: 1px solid rgba(${({ theme }) =>  {return theme === lightTheme ? theme.secondaryRgb : theme.primaryRgb}}, 1);
   }
   
   .pill.secondary {
     background: rgba(${({ theme }) => theme.secondaryRgb}, 1);
     color: rgba(${({ theme }) => theme.primaryRgb}, 1);
-    border: 1px solid rgba(${({ theme }) => theme.secondaryRgb}, 1);
+    border: 1px solid rgba(${({ theme }) => {return theme === darkTheme ? theme.primaryRgb : theme.secondaryRgb}}, 1);
   }
   
   .navx {
