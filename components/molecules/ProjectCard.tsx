@@ -2,6 +2,7 @@ import { IProject } from "@/utils/types";
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from "next/image";
 import { useState } from 'react';
 
 export const ProjectCard: React.FC<IProject> = ({
@@ -34,7 +35,8 @@ export const ProjectCard: React.FC<IProject> = ({
             />
           </div>
         </header>
-  
+
+      
         <AnimatePresence mode='wait'>
           {expanded && (
             <motion.div
@@ -58,6 +60,12 @@ export const ProjectCard: React.FC<IProject> = ({
             </motion.div>
           )}
         </AnimatePresence>
+
+        <Image
+        src={'/img/project/vogue/search.PNG'}
+        alt='' width={300} height={300}
+        />
+  
       </article>
     );
   };

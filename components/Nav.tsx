@@ -6,7 +6,7 @@ import { RandomizeFont } from './atoms/FontRandomizer';
 import AnimatedTextCharacter from './atoms/AnimatedText';
 
 import { AnimatePresence, motion, useScroll } from 'framer-motion';
-import { SunIcon } from '@heroicons/react/24/outline';
+import { SunIcon } from '@heroicons/react/24/solid';
 
 interface NavProps {
   hide?: boolean;
@@ -44,13 +44,14 @@ const Nav: React.FC<NavProps> = ({ hide = false }) => {
         >
           <RandomizeFont text='LinkedIn' />
         </Pill>
-        <Pill className='secondary' onClick={toggleTheme}>
-          T
-        </Pill>
+        <SunIcon
+          className={classNames('w-8 h-8 inline-block transition duration-300 cursor-pointer hover:rotate-45')}
+          onClick={toggleTheme}
+        />
       </div>
       <div className='relative md:hidden text-3xl'>
         <SunIcon
-          className={classNames('w-8 h-8 inline-block transition-transform duration-300 ')}
+          className={classNames('w-8 h-8 inline-block transition duration-300 cursor-pointer mr-2 hover:rotate-45')}
           onClick={toggleTheme}
         />
         <Pill className='secondary' onClick={() => setOpen(prev => !prev)}>
