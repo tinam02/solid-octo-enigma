@@ -31,7 +31,7 @@ export const GlobalStyles = createGlobalStyle`
     background: rgba(${({ theme }) => theme.primaryRgb}, 0.5);
     backdrop-filter: blur(5px);
     filter: drop-shadow(0px 0px 90px rgba(${({ theme }) =>
-      theme.primaryRgb}, 1));
+    theme.primaryRgb}, 1));
     opacity: 90%;
     /* border-radius: 50% 90% 50% 50%; */
     z-index: 1000;
@@ -57,16 +57,16 @@ export const GlobalStyles = createGlobalStyle`
     background: rgba(${({ theme }) => theme.primaryRgb}, 1);
     color: rgba(${({ theme }) => theme.secondaryRgb}, 1);
     border: 1px solid rgba(${({ theme }) => {
-      return theme === lightTheme ? theme.secondaryRgb : theme.primaryRgb;
-    }}, 1);
+    return theme === lightTheme ? theme.secondaryRgb : theme.primaryRgb;
+  }}, 1);
   }
   
   .pill.secondary {
     background: rgba(${({ theme }) => theme.secondaryRgb}, 1);
     color: rgba(${({ theme }) => theme.primaryRgb}, 1);
     border: 1px solid rgba(${({ theme }) => {
-      return theme === darkTheme ? theme.primaryRgb : theme.secondaryRgb;
-    }}, 1);
+    return theme === darkTheme ? theme.primaryRgb : theme.secondaryRgb;
+  }}, 1);
   }
   
   .navx {
@@ -121,5 +121,59 @@ export const GlobalStyles = createGlobalStyle`
   .borderColor{
     border-color: rgba(${({ theme }) => theme.secondaryRgb}, 1);
   }
+
+
+  // Swiper
+  .swiper {
+    max-width: 700px;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    max-height:600px;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height:600px;
+    max-width:590px;
+    object-fit: contain;
+  }
+
+  .swiper-button-next,
+          .swiper-button-prev {
+           height:80px;
+           width:80px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url("/img/paperclip.png");
+
+           }
+
+          .swiper-button-prev {
+            transform: rotate(40deg);
+
+          }
+
+          .swiper-button-next {
+            transform: rotate(220deg);
+
+          }
+
+          .swiper-button-next::after,
+          .swiper-button-prev::after {
+            content: "";
+          }
+  
 
     `;
