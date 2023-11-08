@@ -3,7 +3,7 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -20,6 +20,16 @@ export const ProjectCard: React.FC<IProject> = ({
   className,
 }) => {
   const [expanded, setExpanded] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [contentHeight, setContentHeight] = useState(0);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      // calculate the height of the content
+      setContentHeight(contentRef.current.scrollHeight);
+    }
+  }, [description, expanded]);
+
   return (
     <article className={classNames('project w-full', className)}>
       <header
@@ -48,12 +58,13 @@ export const ProjectCard: React.FC<IProject> = ({
             initial={{ opacity: 0, maxHeight: 0 }}
             animate={{
               opacity: 1,
-              maxHeight: '1000px',
+              maxHeight: contentHeight,
               transition: {
                 duration: 0.5,
               },
             }}
             exit={{ opacity: 0, maxHeight: 0 }}
+            ref={contentRef}
           >
             <p>{description}</p>
             <div className='flex items-center'>
@@ -64,7 +75,12 @@ export const ProjectCard: React.FC<IProject> = ({
         )}
       </AnimatePresence>
 
-      <Swiper navigation={true} autoHeight={false} modules={[Navigation]} className='mySwiper'>
+      <Swiper
+        navigation={true}
+        autoHeight={false}
+        modules={[Navigation]}
+        className='mySwiper'
+      >
         {images?.map(img => {
           return (
             <SwiperSlide key={img.src} style={{ position: 'relative' }}>
