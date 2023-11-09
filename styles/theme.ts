@@ -27,6 +27,14 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.25s linear; 
   }
 
+  a{
+     text-decoration: underline;
+  }
+
+  .markdown *{
+    white-space: pre-wrap ;
+   }
+
   .blur {
     background: rgba(${({ theme }) => theme.primaryRgb}, 0.5);
     backdrop-filter: blur(5px);
@@ -144,6 +152,10 @@ export const GlobalStyles = createGlobalStyle`
     display: block;
     max-height:800px;
     max-width:750px;
+   }
+
+   .swiper-slide figcaption{
+    background: rgba(${({ theme }) => theme.primaryRgb}, 0.5);
    }
 
   .swiper-button-next,

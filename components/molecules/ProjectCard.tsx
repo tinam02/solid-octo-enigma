@@ -66,7 +66,7 @@ export const ProjectCard: React.FC<IProject> = ({
             }}
             exit={{ opacity: 0, maxHeight: 0 }}
             ref={contentRef}
-          >
+          > 
             <MD text={description} />
             <div className='flex items-center'>
               <span className='text-xs'>Year: </span>
@@ -78,11 +78,12 @@ export const ProjectCard: React.FC<IProject> = ({
 
       <Swiper
         navigation={true}
-        autoHeight={false}
         modules={[Navigation]}
         className='mySwiper'
+        autoHeight
       >
         {images?.map((img, i) => {
+          if (img.hide) return;
           return (
             <SwiperSlide key={img.src} style={{ position: 'relative' }}>
               <div
@@ -92,18 +93,25 @@ export const ProjectCard: React.FC<IProject> = ({
                   height: 'max-content',
                 }}
               >
-                <p>asdasd</p>
+                {img.caption && (
+                  <figcaption className='w-full absolute bottom-0 left-0 p-2 text-xs'>
+                    {img.caption}
+                  </figcaption>
+                )}
                 <Image
                   quality={100}
                   priority={i === 0}
                   src={img.src}
-                  alt=''
+                  alt={img.caption || title}
                   width='0'
                   height='0'
-                  sizes='100vw'
+                  sizes='95vw'
+                  loader={({ src, width, quality }) => {
+                    return `${src}?w=${width}&q=${quality || 75}`;
+                  }}
                   style={{ minWidth: '100%', minHeight: '100%' }}
-                  className='w-full h-auto'
-                />{' '}
+                  className='w-full h-full'
+                />
               </div>
             </SwiperSlide>
           );
