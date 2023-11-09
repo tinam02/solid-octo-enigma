@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
+import MD from '../atoms/Markdown';
 
 export const ProjectCard: React.FC<IProject> = ({
   title,
@@ -66,7 +67,7 @@ export const ProjectCard: React.FC<IProject> = ({
             exit={{ opacity: 0, maxHeight: 0 }}
             ref={contentRef}
           >
-            <p>{description}</p>
+            <MD text={description} />
             <div className='flex items-center'>
               <span className='text-xs'>Year: </span>
               <span className='text-xs'>{year}</span>
@@ -81,10 +82,29 @@ export const ProjectCard: React.FC<IProject> = ({
         modules={[Navigation]}
         className='mySwiper'
       >
-        {images?.map(img => {
+        {images?.map((img, i) => {
           return (
             <SwiperSlide key={img.src} style={{ position: 'relative' }}>
-              <img src={img.src} alt='' />
+              <div
+                style={{
+                  position: 'relative',
+                  display: 'block',
+                  height: 'max-content',
+                }}
+              >
+                <p>asdasd</p>
+                <Image
+                  quality={100}
+                  priority={i === 0}
+                  src={img.src}
+                  alt=''
+                  width='0'
+                  height='0'
+                  sizes='100vw'
+                  style={{ minWidth: '100%', minHeight: '100%' }}
+                  className='w-full h-auto'
+                />{' '}
+              </div>
             </SwiperSlide>
           );
         })}
