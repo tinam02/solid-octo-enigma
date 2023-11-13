@@ -1,10 +1,6 @@
-import classNames from 'classnames';
-import { useState } from 'react';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Markdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
-import styled from 'styled-components';
 
 interface Props {
   className?: string;
@@ -13,11 +9,7 @@ interface Props {
 }
 
 const MD: React.FC<Props> = ({ className, onClick, text }) => {
-  return (
-    <Markdown rehypePlugins={[rehypeHighlight]} >
-      {text}
-    </Markdown>
-  );
+  return <Markdown rehypePlugins={[rehypeHighlight]}>{text}</Markdown>;
 };
 
 export default MD;

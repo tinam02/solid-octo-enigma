@@ -53,9 +53,35 @@ export const PROJECTS: IProject[] = [
       },
     ],
     link: 'https://raw-edge.vercel.app/',
-    tags: ['react', 'tailwindcss', 'typescript'],
+    tags: ['react', 'next.js', 'graphql', 'firebase', 'material-ui', 'apollo'],
     year: '2022',
     note: '',
     type: 'self',
+  },
+  {
+    title: 'Gallery App',
+    link: 'https://code-projekat.vercel.app/',
+    description:
+      'A gallery app where you can upload images, create albums and share them with other users. It uses Firebase for authentication and storage. The app is fully responsive and has a dark mode.',
+    year: '2021',
+    type: 'self',
+    tags: ['react', 'firebase', 'framer motion'],
+    images: [
+      {
+        src: '/img/project/gallery/galleryhome.PNG',
+        caption: `Home/explore page`,
+      },
+      {
+        src: '/img/project/gallery/lightbox.PNG',
+      },
+      {
+        src: '/img/project/gallery/profiledef.PNG',
+        caption: `Profile page with your uploaded images and info.`,
+      },
+      {
+        src: '/img/project/gallery/submit.PNG',
+        caption: `Signed in users can upload images.`,
+      },
+    ],
   },
 ];

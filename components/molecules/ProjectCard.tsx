@@ -60,13 +60,11 @@ export const ProjectCard: React.FC<IProject> = ({
             animate={{
               opacity: 1,
               maxHeight: contentHeight,
-              transition: {
-                duration: 0.5,
-              },
+              transition: { duration: 0.2, ease: 'easeInOut' },
             }}
             exit={{ opacity: 0, maxHeight: 0 }}
             ref={contentRef}
-          > 
+          >
             <MD text={description} />
             <div className='flex items-center'>
               <span className='text-xs'>Year: </span>
