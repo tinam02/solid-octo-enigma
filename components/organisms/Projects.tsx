@@ -23,8 +23,14 @@ export const Projects = () => {
           Self-initiated
         </Button>
         <Button
-          className={type === 'experimental' ? 'active' : ''}
-          onClick={() => setType('experimental')}
+          className={type === 'client' ? 'active' : ''}
+          onClick={() => setType('client')}
+        >
+          Work
+        </Button>
+        <Button
+          className={type === 'experiment' ? 'active' : ''}
+          onClick={() => setType('experiment')}
         >
           Experiments
         </Button>
