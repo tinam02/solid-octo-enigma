@@ -97,6 +97,30 @@ Moshi Monsters was a game I used to play as a kid. I recreated the animated logi
       {
         src: '/img/project/moshi-monsters/iggy-chase.gif',
       },
+      {
+        src: '/img/project/moshi-monsters/iggy.png',
+        caption: 'Default Iggy sprite',
+      },
+      {
+        src: '/img/project/moshi-monsters/iggytongue.png',
+        caption: 'Iggy in close proximity to cursor',
+      },
+      {
+        src: '/img/project/moshi-monsters/iggyeat.png',
+        caption: 'Iggy eating cursor',
+      },
+      {
+        src: '/img/project/moshi-monsters/iggyleft.png',
+        caption: 'Iggy looking at cursor on the left',
+      },
+      {
+        src: '/img/project/moshi-monsters/iggyright.png',
+        caption: 'Right',
+      },
+      {
+        src: '/img/project/moshi-monsters/iggyup.png',
+        caption: 'Up',
+      },
     ],
   },
   {
