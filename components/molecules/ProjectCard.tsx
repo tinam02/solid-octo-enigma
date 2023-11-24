@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import MD from '../atoms/Markdown';
+import { ProjSummary } from '@/styles/theme';
 
 export const ProjectCard: React.FC<IProject> = ({
   title,
@@ -66,10 +67,28 @@ export const ProjectCard: React.FC<IProject> = ({
             ref={contentRef}
           >
             <MD text={description} />
-            <div className='flex items-center'>
+            <ProjSummary>
               <span className='text-xs'>Year: </span>
               <span className='text-xs'>{year}</span>
-            </div>
+              <span className='text-xs'>Link: </span>
+              <a
+                className='text-xs w-max'
+                href={link}
+                target='_blank'
+                rel='noreferrer'
+              >
+                {link}
+              </a>
+              <span className='text-xs'>Stack: </span>
+              <div className='text-xs'>
+                {tags?.map((tag, i) => (
+                  <span key={i} className='text-xs'>
+                    {tag}
+                    {i !== tags.length - 1 ? ', ' : ''}
+                  </span>
+                ))}
+              </div>
+            </ProjSummary>
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const lightTheme = {
   primaryRgb: '240, 240, 240',
@@ -13,6 +13,11 @@ export const darkTheme = {
   gradient: 'linear-gradient(#091236, #1E215D)',
   accent: '150, 170, 255',
 };
+
+export const ProjSummary = styled.div(props => ({
+  display:'grid',
+  gridTemplateColumns:'80px 1fr',
+}));
 
 export const GlobalStyles = createGlobalStyle`
   *,
