@@ -15,8 +15,9 @@ export const darkTheme = {
 };
 
 export const ProjSummary = styled.div(props => ({
-  display:'grid',
-  gridTemplateColumns:'80px 1fr',
+  display: 'grid',
+  gridTemplateColumns: '70px 1fr',
+  paddingTop: 10,
 }));
 
 export const GlobalStyles = createGlobalStyle`
@@ -138,14 +139,14 @@ export const GlobalStyles = createGlobalStyle`
 
   // Swiper
   .swiper {
-    max-width: 850px;
+    max-width: 80vw;
     height: 100%;
   }
   
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    max-height:600px;
+    max-height:max-content;
 
     /* Center slide text vertically */
     display: flex;
@@ -189,5 +190,33 @@ export const GlobalStyles = createGlobalStyle`
             content: "";
           }
   
+ .marquee-container {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  gap: 2rem;
+}
+
+.marquee {
+  display: flex;
+  gap: 2rem;
+  animation: marquee 5s linear infinite;
+}
+
+.marquee-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 
     `;

@@ -11,6 +11,7 @@ import { Navigation } from 'swiper/modules';
 import MD from '../atoms/Markdown';
 import { ProjSummary } from '@/styles/theme';
 
+const SMALL_TXT_CLS = 'text-s';
 export const ProjectCard: React.FC<IProject> = ({
   title,
   description,
@@ -25,22 +26,34 @@ export const ProjectCard: React.FC<IProject> = ({
   const contentRef = useRef<HTMLDivElement>(null);
   const [contentHeight, setContentHeight] = useState(0);
 
+
   useEffect(() => {
-    if (contentRef.current) {
-      // calculate the height of the content
-      setContentHeight(contentRef.current.scrollHeight);
-    }
+    const updateHeight = () => {
+      if (contentRef.current) {
+        setContentHeight(contentRef.current.scrollHeight);
+      }
+    };
+
+    updateHeight(); // Initial height calculation
+
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
   }, [description, expanded]);
 
   return (
-    <article className={classNames('project w-full', className)}>
+    <article
+      className={classNames(
+        'project border-t borderColor w-full mb-10 ',
+        className
+      )}
+    >
       <header
         className={classNames(
           'cursor-pointer flex items-center content-center justify-center py-2 w-full relative  '
         )}
         onClick={() => setExpanded(!expanded)}
       >
-        <p>{title}</p>
+        <p className='text-4xl'>{title}</p>
         <div className='absolute right-8 flex h-full items-center'>
           <div className='divider-line mx-8 py-0 my-0 dividerx' />
           <ChevronDownIcon
@@ -55,34 +68,35 @@ export const ProjectCard: React.FC<IProject> = ({
       <AnimatePresence mode='wait'>
         {expanded && (
           <motion.div
-            className={classNames('w-[100%]')}
+            className={classNames('w-[85%] mx-auto')}
             key='answer'
             initial={{ opacity: 0, maxHeight: 0 }}
             animate={{
               opacity: 1,
               maxHeight: contentHeight,
               transition: { duration: 0.2, ease: 'easeInOut' },
+              overflow: 'hidden',
             }}
             exit={{ opacity: 0, maxHeight: 0 }}
             ref={contentRef}
           >
-            <MD text={description} />
+            <MD text={description} className='text-4xl py-3' />
             <ProjSummary>
-              <span className='text-xs'>Year: </span>
-              <span className='text-xs'>{year}</span>
-              <span className='text-xs'>Link: </span>
+              <span className={SMALL_TXT_CLS}>Year</span>
+              <span className={SMALL_TXT_CLS}>{year}</span>
+              <span className={SMALL_TXT_CLS}>Link</span>
               <a
-                className='text-xs w-max'
+                className={`${SMALL_TXT_CLS} w-max`}
                 href={link}
                 target='_blank'
                 rel='noreferrer'
               >
                 {link}
               </a>
-              <span className='text-xs'>Stack: </span>
-              <div className='text-xs'>
+              <span className={SMALL_TXT_CLS}>Stack</span>
+              <div className={SMALL_TXT_CLS}>
                 {tags?.map((tag, i) => (
-                  <span key={i} className='text-xs'>
+                  <span key={i} className='text-s'>
                     {tag}
                     {i !== tags.length - 1 ? ', ' : ''}
                   </span>
@@ -96,7 +110,7 @@ export const ProjectCard: React.FC<IProject> = ({
       <Swiper
         navigation={true}
         modules={[Navigation]}
-        className='mySwiper'
+        className='mySwiper mt-5'
         autoHeight
       >
         {images?.map((img, i) => {
@@ -111,24 +125,36 @@ export const ProjectCard: React.FC<IProject> = ({
                 }}
               >
                 {img.caption && (
-                  <figcaption className='w-full absolute bottom-0 left-0 p-2 text-xs'>
-                    {img.caption}
-                  </figcaption>
+                  <figcaption
+                    className='w-full absolute bottom-0 left-0 p-2 text-xs'
+                    dangerouslySetInnerHTML={{ __html: img.caption }}
+                  />
                 )}
-                <Image
-                  quality={100}
-                  priority={i === 0}
-                  src={img.src}
-                  alt={img.caption || title}
-                  width='0'
-                  height='0'
-                  sizes='95vw'
-                  loader={({ src, width, quality }) => {
-                    return `${src}?w=${width}&q=${quality || 75}`;
-                  }}
-                  style={{ minWidth: '100%', minHeight: '100%' }}
-                  className='w-full h-full'
-                />
+                {img.video ? (
+                  <div className='w-full h-full '>
+                    <video
+                      src={img.src}
+                      autoPlay
+                      muted
+                      style={{ maxHeight: '80vh',pointerEvents:'none' }}
+                    />
+                  </div>
+                ) : (
+                  <Image
+                    quality={100}
+                    priority={i === 0}
+                    src={img.src}
+                    alt={img.caption || title}
+                    width='0'
+                    height='0'
+                    sizes='95vw'
+                    loader={({ src, width, quality }) => {
+                      return `${src}?w=${width}&q=${quality || 75}`;
+                    }}
+                    style={{ minWidth: '100%', minHeight: '100%' }}
+                    className='w-full h-full'
+                  />
+                )}
               </div>
             </SwiperSlide>
           );

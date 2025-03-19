@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { useState } from 'react';
+import { Marquee } from '../atoms/Marquee';
 
 // interface NavProps {
 //   children: React.ReactNode;

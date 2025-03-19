@@ -4,15 +4,20 @@ export const PROJECTS: IProject[] = [
   {
     title: 'Raw Edge',
     description:
-      "**Raw Edge** is a fashion news website that uses Vogue's GraphQL API as a data source. Its main purpose is to display data in a clean, ad-free way. The homepage displays livestreams as they're happening, followed by the latest shows and articles. It has a search function and a user account system with bookmarks for easy access to your favorite content. The site is fully responsive and has a dark mode.",
+      "raw.edge is a fashion news website that uses Vogue's GraphQL API as a data source. Its main purpose is to display data in a clean, ad-free way. The homepage displays livestreams📹 as they're happening, followed by the latest shows and articles. It has a search🔎 function and a user account system with bookmarks🔖 for easy access to your favorite content. The site is fully responsive and has a dark mode.",
     images: [
       {
         src: '/img/project/vogue/Capture.PNG',
         caption: `Homepage with the most recent shows and a carousel of the latest one.`,
       },
       {
+        src: '/img/project/vogue/recording.mp4',
+        caption: `Video walkthrough <br/> <a href='/img/project/vogue/recording.mp4'>Click here to watch in new tab</a>`,
+        video: true,
+      },
+      {
         src: '/img/project/vogue/review.PNG',
-        caption: `Clicking on a show leads to the review page. With images, a written review and author credits.`,
+        caption: `Clicking on a show leads to the review page with images, a written review and author credits.`,
       },
       {
         src: '/img/project/vogue/withdetails.PNG',
@@ -29,23 +34,23 @@ export const PROJECTS: IProject[] = [
       },
       {
         src: '/img/project/vogue/Capture2.PNG',
-        caption: `Article explore page with latest articles.`,
+        caption: `Article explore page`,
       },
       {
         src: '/img/project/vogue/articlesearch.PNG',
-        caption: `Search for articles and brands by keyword.`,
+        caption: `Search for articles and brands by keyword`,
       },
       {
         src: '/img/project/vogue/imagearticle.PNG',
-        caption: `Image article - The content is displayed differently depending on the article type.`,
+        caption: `The content is displayed differently depending on the article type. This is an image article,`,
       },
       {
         src: '/img/project/vogue/shoparticle.PNG',
-        caption: `Shopping article with product links.`,
+        caption: `and this is a shopping article with product links`,
       },
       {
         src: '/img/project/vogue/account.PNG',
-        caption: `Account page with settings and bookmarks.`,
+        caption: `Account page with settings and bookmarks`,
       },
       {
         src: '/img/project/vogue/saved.PNG',
@@ -57,6 +62,53 @@ export const PROJECTS: IProject[] = [
     year: '2022',
     note: '',
     type: 'self',
+  },
+  {
+    title: 'Yοοrdi',
+    link: 'https://yoordi.com/',
+    description: `Official website for Yoordi. It has a Strapi CMS for the client to manage the components, localized text and pages which are dynamically generated. Users from target regions automatically get redirected to their language when visiting the site. It includes forms for leads and selfonboarding and pages which show the gastronomy solutions the company offers. GTM, Ads and HubSpot Analytics are used to track user behavior.`,
+    year: '2023',
+    type: 'client',
+    tags: [
+      'Strapi',
+      'Next.js',
+      'TypeScript',
+      'Vanilla Extract CSS',
+      'Storybook',
+      'Analytics',
+      'SEO',
+      'GA4',
+      'Google Ads',
+    ],
+    images: [
+      {
+        src: '/img/project/ydi/homepage-de.PNG',
+      },
+      {
+        src: '/img/project/ydi/megamenu.PNG',
+        caption: 'Megamenu with submenus',
+      },
+      {
+        src: '/img/project/ydi/yd-sitemp.PNG',
+        caption: 'Sitemap with every page and its localized versions',
+      },
+      {
+        src: '/img/project/ydi/contactform.PNG',
+        caption:
+          'Contact form which connects the user to the company HubSpot and sends an email to the marketing teams channel',
+      },
+      {
+        src: '/img/project/ydi/yd-register.PNG',
+        caption:
+          "Registration form for the company's other website where the user controls everything related to their restaurant",
+      },
+      {
+        src: '/img/project/ydi/yd-team.PNG',
+      },
+      {
+        src: '/img/project/ydi/yd-resutl.PNG',
+      },
+    ],
   },
   {
     title: 'Gallery App',
@@ -86,9 +138,9 @@ export const PROJECTS: IProject[] = [
   },
   {
     title: 'Moshi Monsters login screen recreation',
-    link: 'https://fractal-tree-generator.vercel.app/',
+    link: 'https://moshi-monster-cursor.vercel.app/',
     description: `
-Moshi Monsters was a game I used to play as a kid. I recreated the animated login screen where Iggy the moshling would chase your cursor and eat it if he caught it. I used vanilla JS events combined with GSAP to track, move, change the sprite and change the direction Iggy's eyes are looking according to the cursor position. A few people integrated this code on their tumblr blogs or edited it into their own projects.
+Recreated the animated login screen from Moshi Monsters where Iggy would chase your cursor and eat it if he caught it. I used vanilla JS events combined with GSAP to track, move change the direction Iggy's eyes are looking based on the cursor position. Successfully sold the code to a few Tumblr bloggers to use, before making it public.
     `,
     year: '2022',
     type: 'experiment',
@@ -137,53 +189,6 @@ Moshi Monsters was a game I used to play as a kid. I recreated the animated logi
       {
         src: '/img/project/fractal-tree/fractal-3-complex.PNG',
         caption: 'Tree with a smaller min branch length',
-      },
-    ],
-  },
-  {
-    title: 'Yοοrdi Website',
-    link: 'https://yoordi.com/',
-    description: `Official website for Yοοrdi. It has a Strapi CMS for the client to manage the components, localized text and pages which are dynamically generated. Users from target regions automatically get redirected to their language when visiting the site. It includes forms for leads and selfonboarding and pages which show the gastronomy solutions the company offers. Google and HubSpot Analytics are used to track user behavior.`,
-    year: '2023',
-    type: 'client',
-    tags: [
-      'Strapi',
-      'Next.js',
-      'TypeScript',
-      'Vanilla Extract CSS',
-      'Storybook',
-      'Analytics',
-      'SEO',
-      'GA4',
-      'Google Ads',
-    ],
-    images: [
-      {
-        src: '/img/project/ydi/homepage-de.PNG',
-      },
-      {
-        src: '/img/project/ydi/megamenu.PNG',
-        caption: 'Megamenu with submenus',
-      },
-      {
-        src: '/img/project/ydi/yd-sitemp.PNG',
-        caption: 'Sitemap with every page and its localized versions',
-      },
-      {
-        src: '/img/project/ydi/contactform.PNG',
-        caption:
-          'Contact form which connects the user to the company HubSpot and sends an email to the marketing teams channel',
-      },
-      {
-        src: '/img/project/ydi/yd-register.PNG',
-        caption:
-          "Registration form for the company's other website where the user controls everything related to their restaurant",
-      },
-      {
-        src: '/img/project/ydi/yd-team.PNG',
-      },
-      {
-        src: '/img/project/ydi/yd-resutl.PNG',
       },
     ],
   },

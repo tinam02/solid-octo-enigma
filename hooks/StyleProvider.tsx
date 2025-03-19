@@ -80,7 +80,7 @@ const StyleContext = createContext({
 });
 
 export const StyleProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
 
   const toggleTheme = () => {
     if (theme === 'light') {

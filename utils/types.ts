@@ -5,6 +5,7 @@ export interface IProject {
     src: string;
     caption?: string;
     hide?: boolean;
+    video?: boolean;
   }[];
   link?: string;
   tags: string[];

@@ -9,7 +9,7 @@ export const Projects = () => {
 
   return (
     <section>
-      <div className='flex items-center justify-center gap-2 py-4'>
+      <div className='flex items-center justify-center gap-5 py-4'>
         <Button
           className={type === 'all' ? 'active' : ''}
           onClick={() => setType('all')}
@@ -35,7 +35,7 @@ export const Projects = () => {
           Experiments
         </Button>
       </div>
-      <div className='w-full border-t borderColor'>
+      <div className='w-full'>
         {PROJECTS.filter(project =>
           type !== 'all' ? project.type === type : true
         ).map(project => (

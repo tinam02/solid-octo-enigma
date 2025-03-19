@@ -9,7 +9,7 @@ interface Props {
 }
 
 const MD: React.FC<Props> = ({ className, onClick, text }) => {
-  return <Markdown rehypePlugins={[rehypeHighlight]}>{text}</Markdown>;
+  return <Markdown rehypePlugins={[rehypeHighlight]} className={className}>{text}</Markdown>;
 };
 
 export default MD;
