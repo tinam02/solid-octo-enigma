@@ -28,7 +28,7 @@ export const PROJECTS: IProject[] = [
         caption: `Sometimes there is a video of the show, in which case it will be displayed at the top.`,
       },
       {
-        src: '/img/project/vogue/capturedes.PNG',
+        src: '/img/project/vogue/Capturedes.PNG',
         caption: `When clicking on the designer name at the top, you will be taken to a page where
         you can see all the shows by that designer, a summary and a list of current/previous creative directors.`,
       },
