@@ -9,7 +9,7 @@ export const Projects = () => {
 
   return (
     <section>
-      <div className='flex items-center justify-center gap-5 py-4'>
+      <div className='flex items-center justify-center gap-5 py-4 flex-wrap'>
         <Button
           className={type === 'all' ? 'active' : ''}
           onClick={() => setType('all')}
