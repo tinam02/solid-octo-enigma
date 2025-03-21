@@ -3,8 +3,8 @@ import { IProject } from './types';
 export const PROJECTS: IProject[] = [
   {
     title: 'Raw Edge',
-    description:
-      "raw.edge is a fashion news website that uses Vogue's GraphQL API as a data source. Its main purpose is to display data in a clean, ad-free way. The homepage displays livestreams📹 as they're happening, followed by the latest shows and articles. It has a search🔎 function and a user account system with bookmarks🔖 for easy access to your favorite content. The site is fully responsive and has a dark mode.",
+    description: `raw.edge is a fashion news website that uses Vogue's GraphQL API as a data source. Its main purpose is to display data in a clean, ad-free way. The homepage displays livestreams📹 as they're happening, followed by the latest shows and articles. 
+      It has a search🔎 function and a user account system with bookmarks🔖 for easy access to your favorite content. The site is fully responsive and has a dark mode.`,
     images: [
       {
         src: '/img/project/vogue/Capture.PNG',
@@ -66,7 +66,8 @@ export const PROJECTS: IProject[] = [
   {
     title: 'Yοοrdi Website',
     link: 'https://yoordi.com/',
-    description: `Official website for Yoordi. It has a Strapi CMS for the client to manage the components, localized text and pages which are dynamically generated. Users from target regions automatically get redirected to their language when visiting the site. It includes forms for leads and selfonboarding and pages which show the gastronomy solutions the company offers. GTM, Ads and HubSpot Analytics are used to track user behavior.`,
+    description: `Official website for Yoordi, built in **Next.js 13**. It has a **Strapi CMS** for the client to manage the components, localized text and pages which are dynamically generated. Users from target regions automatically get redirected to their language when visiting the site. It includes forms for leads and selfonboarding and pages which show the gastronomy solutions the company offers. 
+    GTM, Ads and HubSpot Analytics are used to track user behavior.`,
     year: '2023 - present',
     type: 'client',
     tags: [
@@ -112,10 +113,10 @@ export const PROJECTS: IProject[] = [
   },
   {
     title: 'Yοοrdi Ordering & Payment System',
-    description: `Worked on all ordering digitalization apps, enabling management of **POS systems, products, discounts, and loyalty programs**.
-    Developed **financial report tools**📊 and **roles and permissions**🔑 within the admin panel.
+    description: `Worked on all ordering digitalization apps, enabling management of **POS systems, products, discounts**, and **loyalty programs**.
+    Developed **financial report tools**📊 and **roles**🔑 within the admin panel.
     💳 Integrated multiple **payment gateways**.
-    🚚 Built **pre-ordering, delivery, and pickup** features and features tailored to customer needs. 
+    🚚 Built **pre-ordering, delivery**, and **pickup** features and features tailored to customer needs. 
     🧪 Wrote and automated E2E tests to validate full user journeys.`,
     year: '2023 - present',
     type: 'client',

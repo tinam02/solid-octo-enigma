@@ -47,7 +47,7 @@ const Nav: React.FC<NavProps> = ({ hide = false }) => {
       <div></div>
       <div className=' items-center gap-3 hidden md:flex text-4xl'>
         <Pill className='primary text-xxl ' onClick={handleDownload}>
-          <p style={{ display: 'inline-flex' }}>
+          <p className='flex items-center'>
             Portfolio <ArrowDownTrayIcon className='w-8 h-8 ml-2' />
           </p>
         </Pill>

@@ -1,6 +1,5 @@
 import classNames from 'classnames';
-import { useState } from 'react';
-import { Marquee } from '../atoms/Marquee';
+import { RandomizeFont } from '../atoms/FontRandomizer';
 
 // interface NavProps {
 //   children: React.ReactNode;
@@ -19,7 +18,9 @@ export const PageHeader: React.FC<any> = ({
         className
       )}
     >
-      <h1 className='text-[45vw] md:text-9xl '>{text}</h1>
+      <h1 className='text-[45vw] md:text-9xl '>
+        <RandomizeFont text={text}></RandomizeFont>
+      </h1>
     </header>
   );
 };

@@ -1,15 +1,16 @@
+import { ProjSummary } from '@/styles/theme';
 import { IProject } from '@/utils/types';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { EffectFade, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import MD from '../atoms/Markdown';
-import { ProjSummary } from '@/styles/theme';
 
 const SMALL_TXT_CLS = 'text-s';
 export const ProjectCard: React.FC<IProject> = ({
@@ -102,7 +103,7 @@ export const ProjectCard: React.FC<IProject> = ({
               <span className={SMALL_TXT_CLS}>Stack</span>
               <div className={SMALL_TXT_CLS}>
                 {tags?.map((tag, i) => (
-                  <span key={i} className='text-s'>
+                  <span key={i} className='text-s lowercase'>
                     {tag}
                     {i !== tags.length - 1 ? ', ' : ''}
                   </span>
@@ -115,9 +116,11 @@ export const ProjectCard: React.FC<IProject> = ({
 
       <Swiper
         navigation={true}
-        modules={[Navigation]}
+        modules={[Navigation, EffectFade]}
         className='mySwiper mt-5'
         autoHeight
+        effect='fade'
+        fadeEffect={{ crossFade: true }}
       >
         {images?.map((img, i) => {
           if (img.hide) return;
