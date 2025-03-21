@@ -26,7 +26,6 @@ export const ProjectCard: React.FC<IProject> = ({
   const contentRef = useRef<HTMLDivElement>(null);
   const [contentHeight, setContentHeight] = useState(0);
 
-
   useEffect(() => {
     const updateHeight = () => {
       if (contentRef.current) {
@@ -80,19 +79,26 @@ export const ProjectCard: React.FC<IProject> = ({
             exit={{ opacity: 0, maxHeight: 0 }}
             ref={contentRef}
           >
-            <MD text={description} className='text-4xl py-3' />
+            <MD
+              text={description}
+              className='text-4xl py-3 whitespace-pre-wrap'
+            />
             <ProjSummary>
               <span className={SMALL_TXT_CLS}>Year</span>
               <span className={SMALL_TXT_CLS}>{year}</span>
-              <span className={SMALL_TXT_CLS}>Link</span>
-              <a
-                className={`${SMALL_TXT_CLS} w-max`}
-                href={link}
-                target='_blank'
-                rel='noreferrer'
-              >
-                {link}
-              </a>
+              {link && (
+                <>
+                  <span className={SMALL_TXT_CLS}>Link</span>
+                  <a
+                    className={`${SMALL_TXT_CLS} w-max`}
+                    href={link}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {link}
+                  </a>
+                </>
+              )}
               <span className={SMALL_TXT_CLS}>Stack</span>
               <div className={SMALL_TXT_CLS}>
                 {tags?.map((tag, i) => (
@@ -136,7 +142,8 @@ export const ProjectCard: React.FC<IProject> = ({
                       src={img.src}
                       autoPlay
                       muted
-                      style={{ maxHeight: '80vh',pointerEvents:'none' }}
+                      loop
+                      style={{ maxHeight: '80vh', pointerEvents: 'none' }}
                     />
                   </div>
                 ) : (

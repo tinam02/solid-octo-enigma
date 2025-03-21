@@ -64,10 +64,10 @@ export const PROJECTS: IProject[] = [
     type: 'self',
   },
   {
-    title: 'Yοοrdi',
+    title: 'Yοοrdi Website',
     link: 'https://yoordi.com/',
     description: `Official website for Yoordi. It has a Strapi CMS for the client to manage the components, localized text and pages which are dynamically generated. Users from target regions automatically get redirected to their language when visiting the site. It includes forms for leads and selfonboarding and pages which show the gastronomy solutions the company offers. GTM, Ads and HubSpot Analytics are used to track user behavior.`,
-    year: '2023',
+    year: '2023 - present',
     type: 'client',
     tags: [
       'Strapi',
@@ -107,6 +107,49 @@ export const PROJECTS: IProject[] = [
       },
       {
         src: '/img/project/ydi/yd-resutl.PNG',
+      },
+    ],
+  },
+  {
+    title: 'Yοοrdi Ordering & Payment System',
+    description: `Worked on all ordering digitalization apps, enabling management of **POS systems, products, discounts, and loyalty programs**.
+    Developed **financial report tools**📊 and **roles and permissions**🔑 within the admin panel.
+    💳 Integrated multiple **payment gateways**.
+    🚚 Built **pre-ordering, delivery, and pickup** features and features tailored to customer needs. 
+    🧪 Wrote and automated E2E tests to validate full user journeys.`,
+    year: '2023 - present',
+    type: 'client',
+    tags: [
+      'Node.js',
+      'TypeScript',
+      'React',
+      'YML',
+      'Azure',
+      'Jira',
+      'Strapi',
+      'Jest',
+      'TestCafe',
+    ],
+    images: [
+      {
+        src: '/img/project/ydi/demovid.mp4',
+        video: true,
+        caption: 'POS',
+      },
+      {
+        src: '/img/project/ydi/waiter1.png',
+        caption: 'Digital Ordering',
+      },
+      {
+        src: '/img/project/ydi/prodd.png',
+      },
+      {
+        src: '/img/project/ydi/pay.png',
+        caption: 'Payment',
+      },
+      {
+        src: '/img/project/ydi/bill.png',
+        caption: 'Customer receipt',
       },
     ],
   },
