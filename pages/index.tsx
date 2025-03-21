@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <main className={`min-h-screen`}>
-      <PageHeader text='TINA' />
+      <PageHeader text='INFO' />
       <Projects />
     </main>
   );

@@ -2,6 +2,98 @@ import { IProject } from './types';
 
 export const PROJECTS: IProject[] = [
   {
+    title: 'Yοοrdi Ordering & Payment System',
+    description: `Worked on all ordering digitalization apps, enabling management of **POS systems, products, discounts**, and **loyalty programs**.
+  Developed **financial report tools**📊 and **roles**🔑 within the admin panel.
+  💳 Integrated multiple **payment gateways**.
+  🚚 Built **pre-ordering, delivery**, and **pickup** features and features tailored to customer needs. 
+  🧪 Wrote and automated E2E tests to validate full user journeys.`,
+    year: '2023 - present',
+    type: 'client',
+    tags: [
+      'Node.js',
+      'TypeScript',
+      'React',
+      'YML',
+      'Azure',
+      'Jira',
+      'Strapi',
+      'Jest',
+      'TestCafe',
+    ],
+    images: [
+      {
+        src: '/img/project/ydi/demovid.mp4',
+        video: true,
+        caption: 'POS',
+      },
+      {
+        src: '/img/project/ydi/waiter1.png',
+        caption: 'Digital Ordering',
+      },
+      {
+        src: '/img/project/ydi/prodd.png',
+      },
+      {
+        src: '/img/project/ydi/pay.png',
+        caption: 'Payment',
+      },
+      {
+        src: '/img/project/ydi/bill.png',
+        caption: 'Customer receipt',
+      },
+    ],
+  },
+  {
+    title: 'Yοοrdi Website',
+    link: 'https://yoordi.com/',
+    description: `Official website for Yoordi, built in **Next.js 13**. It has a **Strapi CMS** for the client to manage the components, localized text and pages which are dynamically generated. Users from target regions automatically get redirected to their language when visiting the site. It includes forms for leads and selfonboarding and pages which show the gastronomy solutions the company offers. 
+    GTM, Ads and HubSpot Analytics are used to track user behavior.`,
+    year: '2023 - present',
+    type: 'client',
+    tags: [
+      'Strapi',
+      'Next.js',
+      'TypeScript',
+      'Vanilla Extract CSS',
+      'Storybook',
+      'Analytics',
+      'SEO',
+      'GA4',
+      'Google Ads',
+    ],
+    images: [
+      {
+        src: '/img/project/ydi/homepage-de.PNG',
+      },
+      {
+        src: '/img/project/ydi/megamenu.PNG',
+        caption: 'Megamenu with submenus',
+      },
+      {
+        src: '/img/project/ydi/yd-sitemp.PNG',
+        caption: 'Sitemap with every page and its localized versions',
+      },
+      {
+        src: '/img/project/ydi/contactform.PNG',
+        caption:
+          'Contact form which connects the user to the company HubSpot and sends an email to the marketing teams channel',
+      },
+      {
+        src: '/img/project/ydi/yd-register.PNG',
+        caption:
+          "Registration form for the company's other website where the user controls everything related to their restaurant",
+      },
+      {
+        src: '/img/project/ydi/yd-team.PNG',
+      },
+      {
+        src: '/img/project/ydi/yd-resutl.PNG',
+      },
+    ],
+  },
+
+  {
     title: 'Raw Edge',
     description: `raw.edge is a fashion news website that uses Vogue's GraphQL API as a data source. Its main purpose is to display data in a clean, ad-free way. The homepage displays livestreams📹 as they're happening, followed by the latest shows and articles. 
       It has a search🔎 function and a user account system with bookmarks🔖 for easy access to your favorite content. The site is fully responsive and has a dark mode.`,
@@ -64,97 +156,6 @@ export const PROJECTS: IProject[] = [
     type: 'self',
   },
   {
-    title: 'Yοοrdi Website',
-    link: 'https://yoordi.com/',
-    description: `Official website for Yoordi, built in **Next.js 13**. It has a **Strapi CMS** for the client to manage the components, localized text and pages which are dynamically generated. Users from target regions automatically get redirected to their language when visiting the site. It includes forms for leads and selfonboarding and pages which show the gastronomy solutions the company offers. 
-    GTM, Ads and HubSpot Analytics are used to track user behavior.`,
-    year: '2023 - present',
-    type: 'client',
-    tags: [
-      'Strapi',
-      'Next.js',
-      'TypeScript',
-      'Vanilla Extract CSS',
-      'Storybook',
-      'Analytics',
-      'SEO',
-      'GA4',
-      'Google Ads',
-    ],
-    images: [
-      {
-        src: '/img/project/ydi/homepage-de.PNG',
-      },
-      {
-        src: '/img/project/ydi/megamenu.PNG',
-        caption: 'Megamenu with submenus',
-      },
-      {
-        src: '/img/project/ydi/yd-sitemp.PNG',
-        caption: 'Sitemap with every page and its localized versions',
-      },
-      {
-        src: '/img/project/ydi/contactform.PNG',
-        caption:
-          'Contact form which connects the user to the company HubSpot and sends an email to the marketing teams channel',
-      },
-      {
-        src: '/img/project/ydi/yd-register.PNG',
-        caption:
-          "Registration form for the company's other website where the user controls everything related to their restaurant",
-      },
-      {
-        src: '/img/project/ydi/yd-team.PNG',
-      },
-      {
-        src: '/img/project/ydi/yd-resutl.PNG',
-      },
-    ],
-  },
-  {
-    title: 'Yοοrdi Ordering & Payment System',
-    description: `Worked on all ordering digitalization apps, enabling management of **POS systems, products, discounts**, and **loyalty programs**.
-    Developed **financial report tools**📊 and **roles**🔑 within the admin panel.
-    💳 Integrated multiple **payment gateways**.
-    🚚 Built **pre-ordering, delivery**, and **pickup** features and features tailored to customer needs. 
-    🧪 Wrote and automated E2E tests to validate full user journeys.`,
-    year: '2023 - present',
-    type: 'client',
-    tags: [
-      'Node.js',
-      'TypeScript',
-      'React',
-      'YML',
-      'Azure',
-      'Jira',
-      'Strapi',
-      'Jest',
-      'TestCafe',
-    ],
-    images: [
-      {
-        src: '/img/project/ydi/demovid.mp4',
-        video: true,
-        caption: 'POS',
-      },
-      {
-        src: '/img/project/ydi/waiter1.png',
-        caption: 'Digital Ordering',
-      },
-      {
-        src: '/img/project/ydi/prodd.png',
-      },
-      {
-        src: '/img/project/ydi/pay.png',
-        caption: 'Payment',
-      },
-      {
-        src: '/img/project/ydi/bill.png',
-        caption: 'Customer receipt',
-      },
-    ],
-  },
-  {
     title: 'Gallery App',
     link: 'https://code-projekat.vercel.app/',
     description:
@@ -177,6 +178,19 @@ export const PROJECTS: IProject[] = [
       {
         src: '/img/project/gallery/submit.PNG',
         caption: `Signed in users can upload images.`,
+      },
+    ],
+  },
+  {
+    title: 'BannedStory - a MapleStory dress-up sim',
+    link: 'https://bannedstory.vercel.app/',
+    description: 'A simulator for MapleStory characters. Made to look like the actual game.',
+    year: '2025 - present',
+    type: 'self',
+    tags: ['react', 'scss', 'mantine-ui', 'react-draggable'],
+    images: [
+      {
+        src: '/img/project/maple/mpl.png',
       },
     ],
   },

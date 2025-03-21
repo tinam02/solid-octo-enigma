@@ -18,8 +18,8 @@ export const PageHeader: React.FC<any> = ({
         className
       )}
     >
-      <h1 className='text-[45vw] md:text-9xl '>
-        <RandomizeFont text={text}></RandomizeFont>
+      <h1 className='text-[45vw] md:text-[190px] pt-7 '>
+        <RandomizeFont text={text} loop></RandomizeFont>
       </h1>
     </header>
   );
