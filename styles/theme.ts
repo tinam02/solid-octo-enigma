@@ -4,14 +4,14 @@ export const lightTheme = {
   primaryRgb: '240, 240, 240',
   secondaryRgb: '7, 8, 18',
   gradient: 'linear-gradient(#39598A, #79D7ED)',
-  accent: '160, 100, 255',
+  accent: '174, 201, 38',
 };
 
 export const darkTheme = {
-  primaryRgb: '7, 8, 18',
-  secondaryRgb: '240, 240, 240',
+  primaryRgb: '33, 33, 52',
+  secondaryRgb: '222, 120, 33',
   gradient: 'linear-gradient(#091236, #1E215D)',
-  accent: '150, 170, 255',
+  accent: '110, 130, 87',
 };
 
 export const ProjSummary = styled.div(props => ({
@@ -121,7 +121,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
  .project  header:hover{
- background: linear-gradient(180deg, rgba(135,2,250,1) 0%, rgba(0,0,0,0) 100%); 
+ background: linear-gradient(180deg, rgba(${({ theme }) => theme.accent},1) 0%, rgba(0,0,0,0) 100%); 
   }
   .dividerx{
     width:1px;
