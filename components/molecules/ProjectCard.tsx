@@ -49,11 +49,11 @@ export const ProjectCard: React.FC<IProject> = ({
     >
       <header
         className={classNames(
-          'cursor-pointer flex items-center content-center justify-center py-2 w-full relative  '
+          'cursor-pointer flex items-center content-center justify-center py-3 w-full relative  '
         )}
         onClick={() => setExpanded(!expanded)}
       >
-        <p className='text-4xl'>{title}</p>
+        <p className='text-4xl project-title'>{title}</p>
         <div className='absolute right-8 flex h-full items-center'>
           <div className='divider-line mx-8 py-0 my-0 dividerx' />
           <ChevronDownIcon
