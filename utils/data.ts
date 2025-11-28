@@ -95,8 +95,10 @@ export const PROJECTS: IProject[] = [
 
   {
     title: 'Raw Edge',
-    description: `raw.edge is a fashion news website that uses Vogue's GraphQL API as a data source. Its main purpose is to display data in a clean, ad-free way. The homepage displays livestreams📹 as they're happening, followed by the latest shows and articles. 
-      It has a search🔎 function and a user account system with bookmarks🔖 for easy access to your favorite content. The site is fully responsive and has a dark mode.`,
+    description: `raw.edge is a fashion news website that uses Vogue's **GraphQL** API as a data source. Its main purpose is to display data in a clean, ad-free way.
+    The homepage displays livestreams📹 as they're happening, followed by the latest shows and articles. 
+      It has a search function🔎 and a **user account system** with bookmarks🔖 for easy access to favorite content. 
+      The site is fully responsive and has a dark mode.`,
     images: [
       {
         src: '/img/project/vogue/Capture.PNG',
@@ -159,7 +161,7 @@ export const PROJECTS: IProject[] = [
     title: 'Gallery App',
     link: 'https://code-projekat.vercel.app/',
     description:
-      'A gallery app where you can upload images, create albums and share them with other users. It uses Firebase for authentication and storage. Each user has their profile page where they can view the images they uploaded or delete them. The app is fully responsive and has a dark mode.',
+      'A gallery app where you can upload images, create albums and share them with other users. It uses **Firebase** for authentication and storage. Each user has their profile page where they can view the images they uploaded or delete them. The app is fully responsive and has a dark mode.',
     year: '2021',
     type: 'self',
     tags: ['react', 'firebase', 'framer motion'],
@@ -182,9 +184,9 @@ export const PROJECTS: IProject[] = [
     ],
   },
   {
-    title: 'BannedStory - a MapleStory dress-up sim',
+    title: 'BannedStory',
     link: 'https://bannedstory.vercel.app/',
-    description: 'A simulator for MapleStory characters. Made to look like the actual game.',
+    description: 'A dress-up simulator for MapleStory characters. Inspired by the old and now defunct BannedStory.',
     year: '2025 - present',
     type: 'self',
     tags: ['react', 'scss', 'mantine-ui', 'react-draggable'],
